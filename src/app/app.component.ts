@@ -11,4 +11,8 @@ export class AppComponent {
   addNewVal() {
     this.name = this.new;
   }
+
+  outPutEvent(ot){
+    this.new= ot;
+  }
 }
