@@ -7,9 +7,13 @@ import { Component, Input, Output,EventEmitter, OnInit } from '@angular/core';
 })
 export class Child1Component implements OnInit {
   @Input('t') inputText = '';
+  val: string ='';
   @Output() passtext = new EventEmitter<string>();
   constructor() { }
 
+onBlurText(){
+  this.passtext.emit(this.val);
+}
   ngOnInit() {
   }
 
